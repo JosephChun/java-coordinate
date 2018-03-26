@@ -14,32 +14,23 @@ public class Line {
         pointSecond = new Point(points.get(1));
     }
 
-    public int xDistance() {
-        return Math.abs(getPointSecondX() - getPointFirstX());
+    public int firstPointX() {
+        return pointFirst.getPointX();
     }
 
-    public int yDistance() {
-        return Math.abs(getPointSecondY() - getPointFirstY());
+    public int firstPointY() {
+        return pointFirst.getPointY();
+    }
 
+    public int secondPointX() {
+        return pointSecond.getPointX();
+    }
+
+    public int secondPointY() {
+        return pointSecond.getPointY();
     }
 
     public double calculateDistance() {
-        return Math.sqrt(Math.pow(xDistance(), 2) + Math.pow(yDistance(), 2));
-    }
-
-    public int getPointFirstX() {
-        return pointFirst.getX();
-    }
-
-    public int getPointFirstY() {
-        return pointFirst.getY();
-    }
-
-    public int getPointSecondX() {
-        return pointSecond.getX();
-    }
-
-    public int getPointSecondY() {
-        return pointSecond.getY();
+        return pointFirst.calculateDistance(pointSecond);
     }
 }
