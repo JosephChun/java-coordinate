@@ -14,15 +14,15 @@ public class Triangle {
     }
 
     private double distanceA(){
-        return point1.distance(point2);
+        return point1.triangleDistance(point2);
     }
 
     private double distanceB(){
-        return point2.distance(point3);
+        return point2.triangleDistance(point3);
     }
 
     private double distanceC(){
-        return point3.distance(point1);
+        return point3.triangleDistance(point1);
     }
 
     public double area(){

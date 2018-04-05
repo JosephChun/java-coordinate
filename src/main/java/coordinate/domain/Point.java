@@ -20,7 +20,7 @@ public class Point {
         return Math.sqrt(Math.pow(this.x - other.x, 2) + Math.pow(this.y - other.y, 2));
     }
 
-    public double distance(Point other) {
+    public double triangleDistance(Point other) {
         return Math.pow((Math.pow(this.x - other.x, 2) + Math.pow(this.y - other.y, 2)), 0.5);
     }
 
